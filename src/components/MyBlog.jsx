@@ -22,7 +22,7 @@ const MyBlog = () => {
 
   return (
     <div className="w-full py-8 flex justify-center min-h-[79vh] bg-[#242535] text-white">
-      <div className="flex flex-wrap sm:flex-row flex-col justify-center items-center">
+      <div className="flex flex-wrap sm:flex-row gap-3 flex-col justify-center items-center">
         {posts.length === 0 ? (
           <div>
             {" "}
