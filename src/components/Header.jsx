@@ -68,7 +68,7 @@ const Header = () => {
           ) : null
         )}
       </div>
-      <div className="fixed md:bottom-12 md:right-6 bottom-2 right-2">{isActive && <LogoutBtn />}</div>
+      <div className="fixed md:bottom-12 md:right-6 bottom-16 right-2">{isActive && <LogoutBtn />}</div>
     </div>
   );
 };
