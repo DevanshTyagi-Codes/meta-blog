@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { doc, getDoc, deleteDoc } from "firebase/firestore";
 import { db, storage, auth } from "../firebase/firebase";
 import { ref, deleteObject } from "firebase/storage";
@@ -58,9 +58,8 @@ const Post = () => {
                 onClick={deletePost}
                 className="lg:w-[8vw] w-[100px] h-10 px-2 py-1 rounded cursor-pointer hover:scale-105 duration-100 text-white font-medium dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400 mx-auto mb-2"
               >
-                Delete Post
+                <span className="text-nowrap">Delete Post</span>
               </button>
-              
             </div>
           )}
         </div>
@@ -70,7 +69,9 @@ const Post = () => {
       </div>
       <div className="browser-css text-center">{parse(post.content)}</div>
     </div>
-  ) : <div className="py-8 min-h-[79vh] bg-[#242535] text-white"></div>;
+  ) : (
+    <div className="py-8 min-h-[79vh] bg-[#242535] text-white"></div>
+  );
 };
 
 export default Post;
